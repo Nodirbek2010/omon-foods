@@ -1,11 +1,10 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/navbar/navbar';
+import Subcategoriestable from './components/table/table';
 
 function App() {
   return (
-    <div className="App">
-     <Navbar/>
+    <div>
+      <Subcategoriestable/>
     </div>
   );
 }

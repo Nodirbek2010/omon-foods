@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const table = () => {
+const Subcategoriestable = () => {
+    useEffect(() => {
+      fetch('https://api.omofoods.uz/media/images/subcategories')
+    },[])
+    
     return (
 
 
@@ -9,20 +13,22 @@ const table = () => {
                 <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
                         <th scope="col" class="px-6 py-3 rounded-s-lg">
-                            Product name
+                            SUBKATEGORIYA RASMI
                         </th>
                         <th scope="col" class="px-6 py-3">
-                            Qty
+                            SUBKATEGORIYA NOMI
                         </th>
                         <th scope="col" class="px-6 py-3 rounded-e-lg">
-                            Price
+                            TAHRIR
                         </th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="bg-white dark:bg-gray-800">
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Apple MacBook Pro 17"
+                            <div>
+                                <img alt="item" class="h-12 w-12 flex-none rounded-full border object-cover" />
+                            </div>
                         </th>
                         <td class="px-6 py-4">
                             1
@@ -67,4 +73,4 @@ const table = () => {
     )
 }
 
-export default table
+export default Subcategoriestable
