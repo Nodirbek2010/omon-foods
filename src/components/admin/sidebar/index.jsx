@@ -55,12 +55,12 @@ const Home = () => {
          <div key={i} className="" onClick={() => navigate(`/admin${menu?.link}`)}>
          <Link
            to={`/admin${menu.link}`}
-           className={`${menu?.margin && ""} ${path_name.pathname===`/admin${menu.link}`? "actives text-white" : "text-black"} group flex items-center text-sm no-underline text-center gap-3.5 font-medium p-2 rounded-md`}
+           className={`${menu?.margin && ""} ${path_name.pathname===`/admin${menu.link}`? "actives text-black bg-blue-500  w-50 h-10 rounded-md " : "text-black"} group flex items-center text-sm no-underline text-center gap-3.5 font-medium p-2 rounded-md`}
          >
            <h1 className="text-xl ">{React.createElement(menu?.icon)}</h1>
            <h2
 
-             className={`text-xl  ${!open && "opacity-0 translate-x-28 overflow-hidden"
+             className={`text-xl  ${!open && "translate-x-28 overflow-hidden"
                }`}
            >
              {menu?.name}
