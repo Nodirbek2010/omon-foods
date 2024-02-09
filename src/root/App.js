@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Routes, useLocation,  } from 'react-router-dom';
 import Layout from './components/admin/Layout';
 import NotFound from './components/notfound';
-import Products from './components/admin/Products/products';
 // import NotFound from './NotFound.jsx';
 // import Dasjboard from './components/admin/Dasjboard/Dasjboard.jsx';
 // import Layout from './components/admin/Layout/index.jsx';
@@ -14,10 +13,9 @@ import Products from './components/admin/Products/products';
 // import NoteTable from './components/admin/note/NoteTable.jsx';
 // import OrderCrud from './components/admin/order/Orders.jsx';
 // import { default as ProductCrud, default as ProductTable } from './components/admin/productCrud/Table.jsx';
-// import SubcategorieCom from './components/admin/subCategoriya/TableSub.jsx';
+import Subcategoriya from '../components/admin/subCategoriya/Subcategoriya';
 // import Basket from './components/client/Basket.jsx';
 // import NavbarMobile from './components/client/NavbarMobile.jsx';
-// import CategoryIdPage from './pages/client/categorieid/index.jsx';
 // import HomePage from './pages/client/home/index.jsx';
 // import ProductPage from './pages/client/product/index.jsx';
 // import BaskerPage from './pages/client/basket/index.jsx';
@@ -36,11 +34,11 @@ function App() {
             <Route element={<Layout />}>
               <Route path="/admin/home" element={<h1>Admin</h1>} />
               <Route path="/admin/order" element={<h1>order</h1>} />
-              <Route path="/admin/subcategories" element={<h1>subcategories</h1>} />
+              <Route path="/admin/subcategories" element={} />
               <Route path="/admin/banners" element={<h1>banners</h1>} />
               <Route path="/admin/dashbord" element={<h1>dashbord</h1>} />
               <Route path="/admin/discount" element={<h1>discount</h1>} />
-              <Route path="/admin/products" element={<><Products/></>} />
+              <Route path="/admin/products" element={<h1>products</h1>} />
               <Route path="/admin/deliveries" element={<h1>deliveries</h1>} />
               <Route path="/admin/categories" element={<h1>categories</h1>} />
               <Route path="/admin/note" element={<h1>note</h1>} />
