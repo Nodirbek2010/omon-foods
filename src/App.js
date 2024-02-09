@@ -1,10 +1,11 @@
 import './App.css';
-import Subcategoriestable from './components/table/table';
+import Navbar from './components/navbar/navbar';
 
 function App() {
+
   return (
-    <div>
-      <Subcategoriestable/>
+    <div className="App">
+     <Navbar/>
     </div>
   );
 }
