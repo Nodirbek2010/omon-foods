@@ -9,16 +9,18 @@ const Products  =() => {
     const [data,setData] =useState([])
 
 useEffect(() => {
-fetch(`${url}products/`).then((res) => res.json())
+fetch(`https://omofood.pythonanywhere.com/api/v1/products/`,{
+    headers: `${BEARER} `
+}).then((res) => res.json())
 .then((res) => setData(res))
 },[])
 
 console.log(data);
     return (
         <>
-      <div className="flex  justify-between  p-10 10">
+      <div className="flex justify-between p-10 10">
 <input className="border-solid border-2 border-slate-600 p-2 3 rounded-md ..." type="text"  placeholder="Izlash......."/>
-<button className="bg-blue-500  w-40 h-10 rounded-md">+Maxsulot</button>
+<button className="w-40 h-10 bg-blue-500 rounded-md">+Maxsulot</button>
       </div>
 
 <div class="relative overflow-x-auto">

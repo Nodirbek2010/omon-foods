@@ -34,7 +34,7 @@ const Home = () => {
 
         <div className="flex items-center justify-end gap-6 py-3 text-center">
           <Link to={"/admin/home"} className={`no-underline ${open ? "block" : "hidden"}`}>
-            <h1 className="text-black">Omo Food</h1>
+            <h1 className="text-4xl text-black">OMO FOOD</h1>
           </Link>
 
           {open ? (
