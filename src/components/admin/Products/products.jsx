@@ -15,10 +15,13 @@ const Products = () => {
     };
     useEffect(() => {
         axios(`https://omofood.pythonanywhere.com/api/v1/products/`, { headers })
-            .then((res) => setData(res))
+            .then((res) => setData(res?.data))
+            .catch((error) => {
+                // Handle error, e.g., log it or display an error message.
+                console.error('Error fetching data:', error);
+            });
     }, [])
 
-    console.log(data);
     return (
         <>
             <div className="flex justify-between p-10 10">
@@ -31,35 +34,37 @@ const Products = () => {
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3">
-                                Product name
+                                Maxsulot   
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Color
+                                Maxsulot narxi
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Category
+                                Maxsulot yaratilgan vaqti
                             </th>
-                            <th scope="col" class="px-6 py-3">
-                                Price
-                            </th>
+                          
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Apple MacBook Pro 17"
-                            </th>
-                            <td class="px-6 py-4">
-                                Silver
-                            </td>
-                            <td class="px-6 py-4">
-                                Laptop
-                            </td>
-                            <td class="px-6 py-4">
-                                $2999
-                            </td>
-                        </tr>
+                   {data?.map((value) =>{
 
+                    return(
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <img src="" alt="" />
+                           {value?.title}
+                        </th>
+                        <td class="px-6 py-4">
+                            {value?.price }<h1>so'm </h1>
+                        </td>
+                        <td class="px-6 py-4">
+                           {value?.created_date}
+                        </td>
+                   
+                    </tr>
+
+                    )
+                   })}
 
                     </tbody>
                 </table>
