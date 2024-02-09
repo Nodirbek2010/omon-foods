@@ -34,12 +34,12 @@ const Login = () => {
 
     return (
 
-        <div className="container d-flex justify-content-center align-items-center vh-100">
+        <div className="containerlogin d-flex justify-content-center align-items-center vh-100">
             <div className="col-md-6">
                 <div className="card shadow">
                     <div className="card-body">
-                        <h2 className="card-title text-center mb-4">Login</h2>
-                        <div className="mb-3">
+                        <h2 className="owtext-center card-title">Login</h2>
+                        <div className="logininput">
                             <label htmlFor="username" className="form-label">
                                 Username
                             </label>
@@ -53,7 +53,7 @@ const Login = () => {
                                 required
                             />
                         </div>
-                        <div className="mb-3 position-relative">
+                        <div className="logininput position-relative">
                             <label htmlFor="password" className="form-label">
                                 Password
                             </label>
