@@ -1,68 +1,75 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../../App.css'
-import url from './api/url'
-const Subcategoriya = () => {
-    const Products  =() => {
+import { FaEdit } from "react-icons/fa";
+import { MdDeleteForever } from "react-icons/md";
+import axios from 'axios';
+const Products = () => {
 
-        const [data,setData] =useState([])
-    
+    const [data, setData] = useState([])
+
+    const token = localStorage.getItem("token");
+    const headers = {
+        Authorization: `Bearer ${token}`,
+    };
     useEffect(() => {
-    fetch(`${url}sub-categories/`).then((res) => res.json())
-    .then((res) => setData(res))
-    },[])
+        axios(`https://omofood.pythonanywhere.com/api/v1//sub-categories/`, { headers })
+            .then((res) => setData(res?.data))
+            .catch((error) => {
+                // Handle error, e.g., log it or display an error message.
+                console.error('Error fetching data:', error);
+            });
+    }, [])
+
     return (
-        <div>
+        <>
+            <div className="flex justify-between p-10 10">
+                <input className="border-solid border-2 border-slate-600 p-2 3 rounded-md ..." type="text" placeholder="Izlash......." />
+                <button className="w-40 h-10 bg-blue-500 rounded-md">+Maxsulot</button>
+            </div>
 
-
-
-
-
-            <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <div class="relative overflow-x-auto">
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3">
-                                Product name
+                                SUBKATEGORIYA RASMI
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Color
+                                SUBKATEGORIYA NOMI
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Category
+                                KATTA KATEGORY NOMI
                             </th>
-                            <th scope="col" class="px-6 py-3">
-                                Price
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                <span class="sr-only">Edit</span>
-                            </th>
+
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                Apple MacBook Pro 17"
-                            </th>
-                            <td class="px-6 py-4">
-                                Silver
-                            </td>
-                            <td class="px-6 py-4">
-                                Laptop
-                            </td>
-                            <td class="px-6 py-4">
-                                $2999
-                            </td>
-                            <td class="px-6 py-4 text-right">
-                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                            </td>
-                        </tr>
-                        
+                        {data?.map((value) => {
+
+                            return (
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        <img src="" alt="" />
+                                        {value?.thumbnail_image}
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        {value?.category?.title
+                                        }
+                                    </td>
+                                    <td class="flex px-6 py-4">
+                                    <FaEdit />
+                                    <MdDeleteForever />
+                                    </td>
+
+                                </tr>
+
+                            )
+                        })}
+
                     </tbody>
                 </table>
             </div>
-
-        </div>
+        </>
     )
 }
-
-export default Subcategoriya
+export default Products

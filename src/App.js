@@ -1,10 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, useLocation,  } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import Layout from './components/admin/Layout';
-import NotFound from './components/notfound/index';
 import Products from './components/admin/Products/products';
-import Subcategoriya from './components/admin/Subcategoriya';
-
+import Subcategoriya from "./components/admin/subCategoriya/Subcategoriya"
 function App() {
   return (
     <>
@@ -31,27 +29,3 @@ function App() {
 }
 
 export default App;
-
-
-
-// import NotFound from './NotFound.jsx';
-// import Dasjboard from './components/admin/Dasjboard/Dasjboard.jsx';
-// import Layout from './components/admin/Layout/index.jsx';
-// import Login from './components/admin/auth/sigin.jsx';
-// import Banners from './components/admin/banner/Banners.jsx';
-// import CategoriesCrud from './components/admin/categoriesCrud/Table.jsx';
-// import Deliveries from './components/admin/deliveries/Table.jsx';
-// import DiscountTbale from './components/admin/discountCrud/Table.jsx';
-// import NoteTable from './components/admin/note/NoteTable.jsx';
-// import OrderCrud from './components/admin/order/Orders.jsx';
-// import { default as ProductCrud, default as ProductTable } from './components/admin/productCrud/Table.jsx';
-// import SubcategorieCom from './components/admin/subCategoriya/TableSub.jsx';
-// import Basket from './components/client/Basket.jsx';
-// import NavbarMobile from './components/client/NavbarMobile.jsx';
-// import CategoryIdPage from './pages/client/categorieid/index.jsx';
-// import HomePage from './pages/client/home/index.jsx';
-// import ProductPage from './pages/client/product/index.jsx';
-// import BaskerPage from './pages/client/basket/index.jsx';
-// import DeskModal from './components/client/DeskModal.jsx';
-// import HomeIndex from './components/client/index.jsx';
-// import Home from './components/client/Home.jsx';
