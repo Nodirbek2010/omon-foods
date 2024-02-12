@@ -1,8 +1,39 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, useLocation,  } from 'react-router-dom';
 import Layout from './components/admin/Layout';
-import NotFound from './components/notfound';
+import NotFound from './components/notfound/index';
 import Products from './components/admin/Products/products';
+import Subcategoriya from './components/admin/Subcategoriya';
+
+function App() {
+  return (
+    <>
+<BrowserRouter>
+      <Routes>
+        <Route index element={<h1>Home Page</h1>} />
+        <Route path="/admin" element={<h1>Login</h1>} />
+            <Route element={<Layout />}>
+              <Route path="/admin/home" element={<h1>Admin</h1>} />
+              <Route path="/admin/order" element={<h1>order</h1>} />
+              <Route path="/admin/subcategories" element={<Subcategoriya/>} />
+              <Route path="/admin/banners" element={<h1>banners</h1>} />
+              <Route path="/admin/dashbord" element={<h1>dashbord</h1>} />
+              <Route path="/admin/discount" element={<h1>discount</h1>} />
+              <Route path="/admin/products" element={<><Products/></>} />
+              <Route path="/admin/deliveries" element={<h1>deliveries</h1>} />
+              <Route path="/admin/categories" element={<h1>categories</h1>} />
+              <Route path="/admin/note" element={<h1>note</h1>} />
+            </Route>
+      </Routes>
+      </BrowserRouter>
+    </>
+  );
+}
+
+export default App;
+
+
+
 // import NotFound from './NotFound.jsx';
 // import Dasjboard from './components/admin/Dasjboard/Dasjboard.jsx';
 // import Layout from './components/admin/Layout/index.jsx';
@@ -24,30 +55,3 @@ import Products from './components/admin/Products/products';
 // import DeskModal from './components/client/DeskModal.jsx';
 // import HomeIndex from './components/client/index.jsx';
 // import Home from './components/client/Home.jsx';
-
-function App() {
-  return (
-    <>
-<BrowserRouter>
-      <Routes>
-        <Route index element={<h1>Home Page</h1>} />
-        <Route path="/admin" element={<h1>Login</h1>} />
-            <Route element={<Layout />}>
-              <Route path="/admin/home" element={<h1>Admin</h1>} />
-              <Route path="/admin/order" element={<h1>order</h1>} />
-              <Route path="/admin/subcategories" element={<h1>subcategories</h1>} />
-              <Route path="/admin/banners" element={<h1>banners</h1>} />
-              <Route path="/admin/dashbord" element={<h1>dashbord</h1>} />
-              <Route path="/admin/discount" element={<h1>discount</h1>} />
-              <Route path="/admin/products" element={<><Products/></>} />
-              <Route path="/admin/deliveries" element={<h1>deliveries</h1>} />
-              <Route path="/admin/categories" element={<h1>categories</h1>} />
-              <Route path="/admin/note" element={<h1>note</h1>} />
-            </Route>
-      </Routes>
-      </BrowserRouter>
-    </>
-  );
-}
-
-export default App;

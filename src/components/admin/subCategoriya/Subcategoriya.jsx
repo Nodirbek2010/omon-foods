@@ -1,9 +1,20 @@
 import React from 'react'
-import '../../../root/App.css'
-
+import '../../../App.css'
+import url from './api/url'
 const Subcategoriya = () => {
+    const Products  =() => {
+
+        const [data,setData] =useState([])
+    
+    useEffect(() => {
+    fetch(`${url}sub-categories/`).then((res) => res.json())
+    .then((res) => setData(res))
+    },[])
     return (
         <div>
+
+
+
 
 
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
