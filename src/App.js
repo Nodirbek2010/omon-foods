@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, useLocation, } from 'react-router-dom';
 import Layout from './components/admin/Layout';
-import NotFound from './components/notfound';
+// import NotFound from './components/notfound';
 import Products from './components/admin/Products/products';
 import Login from "./components/admin/login"
+import Categories from './components/admin/Categories/categ';
 // import NotFound from './NotFound.jsx';
 // import Dasjboard from './components/admin/Dasjboard/Dasjboard.jsx';
 // import Layout from './components/admin/Layout/index.jsx';
@@ -43,7 +44,7 @@ function App() {
             <Route path="/admin/discount" element={<h1>discount</h1>} />
             <Route path="/admin/products" element={<><Products /></>} />
             <Route path="/admin/deliveries" element={<h1>deliveries</h1>} />
-            <Route path="/admin/categories" element={<h1>categories</h1>} />
+            <Route path="/admin/categories" element={<Categories/>} />
             <Route path="/admin/note" element={<h1>note</h1>} />
           </Route>
         </Routes>
