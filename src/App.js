@@ -3,13 +3,14 @@ import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 import Layout from './components/admin/Layout';
 import Products from './components/admin/Products/products';
 import Subcategoriya from "./components/admin/subCategoriya/Subcategoriya"
+import Login from './components/admin/login';
 function App() {
   return (
     <>
 <BrowserRouter>
       <Routes>
         <Route index element={<h1>Home Page</h1>} />
-        <Route path="/admin" element={<h1>Login</h1>} />
+        <Route path="/admin" element={<Login/>} />
             <Route element={<Layout />}>
               <Route path="/admin/home" element={<h1>Admin</h1>} />
               <Route path="/admin/order" element={<h1>order</h1>} />

@@ -14,7 +14,7 @@ const Products = () => {
         Authorization: `Bearer ${token}`,
     };
     useEffect(() => {
-        axios(`https://omofood.pythonanywhere.com/api/v1/sub-categories/`, { headers })
+        axios(`https://omofood.pythonanywhere.com/api/v1/products/`, { headers })
             .then((res) => setData(res?.data))
             .catch((error) => {
                 // Handle error, e.g., log it or display an error message.
@@ -26,7 +26,7 @@ const Products = () => {
         <>
             <div className="flex justify-between p-10 10">
                 <input className="border-solid border-2 border-slate-600 p-2 3 rounded-md ..." type="text" placeholder="Izlash......." />
-                <button className="w-40 h-10 bg-blue-500 rounded-md">+Subcategoriya</button>
+                <button className="w-40 h-10 bg-blue-500 rounded-md">+Maxsulot</button>
             </div>
 
             <div class="relative overflow-x-auto">
@@ -34,37 +34,37 @@ const Products = () => {
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3">
-                                SUBKATEGORIYA RASMI
+                                Maxsulot   
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                SUBKATEGORIYA NOMI
+                                Maxsulot narxi
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                EDIT
+                                Maxsulot yaratilgan vaqti
                             </th>
-
+                          
                         </tr>
                     </thead>
                     <tbody>
-                        {data?.map((value) => {
+                   {data?.map((value) =>{
 
-                            return (
-                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        <img src="" alt="" />
-                                        {value?.thumbnail_image}
-                                    </th>
-                                    <td class="px-6 py-4">
-                                        {value?.cate}
-                                    </td>
-                                    <td class="px-6 py-4">
-                                        {value?.created_date}
-                                    </td>
+                    return(
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <img src="" alt="" />
+                           {value?.title}
+                        </th>
+                        <td class="px-6 py-4">
+                            {value?.price }<h1>so'm </h1>
+                        </td>
+                        <td class="px-6 py-4">
+                           {value?.created_date}
+                        </td>
+                   
+                    </tr>
 
-                                </tr>
-
-                            )
-                        })}
+                    )
+                   })}
 
                     </tbody>
                 </table>
