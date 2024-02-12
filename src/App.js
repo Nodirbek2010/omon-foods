@@ -26,7 +26,6 @@ import Products from './components/admin/Products/products';
 // import Home from './components/client/Home.jsx';
 
 function App() {
-
   return (
     <>
 <BrowserRouter>
