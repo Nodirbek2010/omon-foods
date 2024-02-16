@@ -1,16 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query/react';
-import { CrudUser } from '../Slice/slice';
+import { CatigoriesCrud } from '../Slice/catigories/slice';
 
 
 
 export const store = configureStore({
     reducer: {
-        [CrudUser.reducerPath]: CrudUser.reducer,
+        [CatigoriesCrud.reducerPath]: CatigoriesCrud.reducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(
-            CrudUser.middleware,
+            CatigoriesCrud.middleware,
         ),
 });
 

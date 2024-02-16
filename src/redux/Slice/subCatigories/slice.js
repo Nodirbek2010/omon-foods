@@ -1,13 +1,14 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { api } from '../../../../../api/api';
 
 export const CrudUser = createApi({
-    baseQuery: fetchBaseQuery({ baseUrl: 'https://ratingkorea.pythonanywhere.com/api/v1/' }),
-    reducerPath: 'FamousData',
-    tagTypes: ['Famous'],
+    baseQuery: api,
+    reducerPath: 'CategoriesCrud',
+    tagTypes: ['Catigories'],
     endpoints: (builder) => ({
-        getFamous: builder.query({
+        getCatigories: builder.query({
             query: () => 'custom-users/',
-            providesTags: ['Famous'],
+            providesTags: ['Catigories'],
         }),
         createFamous: builder.mutation({
             query: (body) => ({
@@ -15,7 +16,7 @@ export const CrudUser = createApi({
                 method: "POST",
                 body,
             }),
-            invalidatesTags: ['Famous'],
+            invalidatesTags: ['Catigories'],
         }),
         deleteFamous: builder.mutation({
             query: (body) => ({
@@ -23,13 +24,14 @@ export const CrudUser = createApi({
                 method: 'DELETE',
                 body,
             }),
-            invalidatesTags: ['Famous']
+            invalidatesTags: ['Catigories']
         }),
     }),
 });
 
 export const {
-    useGetFamousQuery,
-    useDeleteFamousMutation,
-    useCreateFamousMutation,
+  useGetCatigoriesQuery,
+  useCreateFamousMutation,
+ 
+    
 } = CrudUser;
