@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Modal from '../../generic/modal'
-import { FaPlus } from 'react-icons/fa6'
 import ImageUpload from '../../generic/imgUploadFile'
 import { MdOutlineInsertPhoto } from 'react-icons/md'
 import {  useUpdateCatigoriesMutation } from '../../../redux/Slice/catigories/slice'
@@ -20,11 +19,11 @@ const UpdateCom = ({user}) => {
     
         try {
           await updateCatigories(formData).unwrap();
-          toast.success(`Mahsulod turi  ${inputValue.title} qushildi`);
+          toast.success(`Mahsulod ${inputValue.title} o'zgartirildi`);
           setModal(false);
         } catch (error) {
             if (error.status == 400) {
-                toast.error(`Malumot yuborishda xatolik !!!`);
+                toast.error(`Malumot o'zgartirishda xatolik !!!`);
             }
         }
       };
@@ -39,7 +38,7 @@ const UpdateCom = ({user}) => {
                 modal &&
                 <Modal loader={isLoading} closeModal={() => setModal(false)} addFunc={() => addData()}>
 
-                    <div class="p-4 grid gap-3 grid-cols-2 md:p-5">
+                    <div class="p-4  gap-3  md:p-5">
                         <div>
                             <h3>Edit</h3>
                             <input value={inputValue.title} onChange={(e) => setInputValue({ ...inputValue, title: e.target.value })} type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
