@@ -3,7 +3,6 @@ import { toast } from 'react-toastify'
 import url from '../../../api/api'
 
 const Updater = ({ item }) => {
-    console.log(item, 'item');
     const [modal, setModal] = useState(false)
     const [input, setInput] = useState(item)
     const addUser = () => {

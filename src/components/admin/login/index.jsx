@@ -21,7 +21,6 @@ const Login = () => {
             .then(response => {
                 const token = response.data.access;
                 localStorage.setItem('token', token);
-                console.log('Token saved to local storage:', token);
 
                 if (response.status===200) {
                     navigate('/admin/home')

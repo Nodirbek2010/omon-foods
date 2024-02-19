@@ -20,8 +20,9 @@ export const CatigoriesCrud = createApi({
         }),
         updateCatigories: builder.mutation({
             query: (body) => ({
-                url: `categories/`,
-                method: "POST",
+                url: `categories/${body.get('id')}/`,
+
+                method: "PATCH",
                 body,
             }),
             invalidatesTags: ['Catigories'],
