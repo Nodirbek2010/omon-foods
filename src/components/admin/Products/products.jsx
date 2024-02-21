@@ -2,6 +2,10 @@ import { useEffect } from "react"
 import url from "../../../api"
 import { useState } from "react"
 import axios from "axios"
+import { useGetProductsQuery } from "../../../redux/Slice/Products/slice";
+import AdddUser from "../Products/addUser";
+
+
 
 
 
@@ -24,11 +28,10 @@ const Products = () => {
 
     return (
         <>
-            <div className="flex justify-between p-10 10">
-                <input className="border-solid border-2 border-slate-600 p-2 3 rounded-md ..." type="text" placeholder="Izlash......." />
-                <button className="w-40 h-10 bg-blue-500 rounded-md">+Maxsulot</button>
-            </div>
-
+       <div className="flex justify-between items-center">   <input className="w-[250px] border-solid border-2  p-2 3 rounded-md ..." type="text" placeholder="Izlash..."
+                // onChange={(e) => setSearch(e.target.value)}
+            />
+                <AdddUser /></div>
             <div class="relative overflow-x-auto">
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
