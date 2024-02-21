@@ -6,6 +6,9 @@ import { useGetProductsQuery } from "../../../redux/Slice/Products/slice";
 import AdddUser from "../Products/addUser";
 
 
+import DeleteFun from "../Products/delete1";
+// import UpdateCom from "./update";
+
 
 
 
@@ -28,8 +31,8 @@ const Products = () => {
 
     return (
         <>
-       <div className="flex justify-between items-center">   <input className="w-[250px] border-solid border-2  p-2 3 rounded-md ..." type="text" placeholder="Izlash..."
-                // onChange={(e) => setSearch(e.target.value)}
+            <div className="flex justify-between items-center">   <input className="w-[250px] border-solid border-2  p-2 3 rounded-md ..." type="text" placeholder="Izlash..."
+            // onChange={(e) => setSearch(e.target.value)}
             />
                 <AdddUser /></div>
             <div class="relative overflow-x-auto">
@@ -37,7 +40,7 @@ const Products = () => {
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3">
-                                Maxsulot   
+                                Maxsulot
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Maxsulot narxi
@@ -45,29 +48,36 @@ const Products = () => {
                             <th scope="col" class="px-6 py-3">
                                 Maxsulot yaratilgan vaqti
                             </th>
-                          
+                            <td className="flex gap-2 items-center">
+
+
+                            </td>
                         </tr>
                     </thead>
                     <tbody>
-                   {data?.map((value) =>{
+                        {data?.map((value) => {
 
-                    return(
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <img src="" alt="" />
-                           {value?.title}
-                        </th>
-                        <td class="px-6 py-4">
-                            {value?.price }<h1>so'm </h1>
-                        </td>
-                        <td class="px-6 py-4">
-                           {value?.created_date}
-                        </td>
-                   
-                    </tr>
+                            return (
+                                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        <img className="w-[50px] h-[50px] rounded-lg" src={value?.image} alt="" />
+                                        {value?.title}
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        {value?.price}<h1>so'm </h1>
+                                    </td>
+                                    <td class="px-6 py-4">
+                                        {value?.created_date}
+                                    </td>
+                                    <td className="flex gap-2 items-center">
 
-                    )
-                   })}
+                                        <DeleteFun ID={value.id} />
+                                    </td>
+
+                                </tr>
+
+                            )
+                        })}
 
                     </tbody>
                 </table>

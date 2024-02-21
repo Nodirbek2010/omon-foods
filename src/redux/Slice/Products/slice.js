@@ -42,7 +42,7 @@ export const {
   useGetProductsQuery,
   useCreateProductsMutation,
   useDeleteProductsMutation,
-  useUpdateProductsMutation,
+  useUpdateCatigoriesMutation,
  
     
 } = ProductsCrud;
