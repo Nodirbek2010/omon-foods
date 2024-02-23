@@ -15,6 +15,8 @@ function App() {
           <Route element={<LayoutClient />} >
             <Route index element={<h1>Home components</h1>} />
             <Route path='/shop' element={<h1>Shop</h1>} />
+            <Route path='/about' element={<h1>About</h1>} />
+
           </Route>
         </Routes>
         <Routes>
