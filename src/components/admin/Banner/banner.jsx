@@ -2,7 +2,6 @@ import React from 'react';
 import { useGetBannersQuery } from '../../../redux/Slice/banner/slice.js';
 import AddBanners from './addbanner';
 import DeleteBanners from './DeleteBanner.jsx';
-import UpdateBanners from './UpdateBanners.jsx';
 
 const BannerFun = () => {
     const { data,isLoading } = useGetBannersQuery();
@@ -60,7 +59,7 @@ const BannerFun = () => {
                                                     </th>
                                                     <td className="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                         <div className="flex items-center space-x-4">
-                                                            <UpdateBanners item={item.id} />
+                                                            {/* <UpdateBanners item={item.id} /> */}
                                                             <DeleteBanners ID={item.id} />
                                                         </div>
                                                     </td>

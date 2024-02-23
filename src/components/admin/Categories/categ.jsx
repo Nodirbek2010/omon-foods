@@ -15,7 +15,7 @@ const Categories = () => {
     }, [catigoriesData, search])
 
     return (
-        <div>
+        <div >
             <div className="flex justify-between items-center">   <input className="w-[250px] border-solid border-2  p-2 3 rounded-md ..." type="text" placeholder="Izlash..."
                 onChange={(e) => setSearch(e.target.value)}/>
                 <AddUser />
