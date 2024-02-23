@@ -5,6 +5,7 @@ import Products from './components/admin/Products/products';
 import Subcategoriya from "./components/admin/subCategoriya/Subcategoriya"
 import Login from './components/admin/login';
 import Categories from './components/admin/Categories/categ';
+import BannerFun from './components/admin/Banner/banner';
 function App() {
   return (
     <>
@@ -16,7 +17,7 @@ function App() {
               <Route path="/admin/home" element={<h1>Admin</h1>} />
               <Route path="/admin/order" element={<h1>order</h1>} />
               <Route path="/admin/subcategories" element={<Subcategoriya/>} />
-              <Route path="/admin/banners" element={<h1>banners</h1>} />
+              <Route path="/admin/banners" element={<BannerFun/>} />
               <Route path="/admin/dashbord" element={<h1>dashbord</h1>} />
               <Route path="/admin/discount" element={<h1>discount</h1>} />
               <Route path="/admin/products" element={<><Products/></>} />

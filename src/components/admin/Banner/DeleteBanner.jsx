@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useDeleteCatigoriesMutation } from "../../../redux/Slice/catigories/slice";
+import { useDeleteBannersMutation } from "../../../redux/Slice/banner/slice";
 import Modal from "../../generic/modal";
 import { BsTrash } from "react-icons/bs";
 import { toast } from "react-toastify";
-export default function DeleteCatigories({ID}) {
+export default function DeleteBanners({ID}) {
     const [skip, setIsOpen] = useState(false);
     const closeModal = () => setIsOpen(!skip);
-    const [deleteProduct, { isLoading }] = useDeleteCatigoriesMutation({skip});
+    const [deleteProduct, { isLoading }] = useDeleteBannersMutation({skip});
 
     const handleDelete = async (id) => {
         try {
