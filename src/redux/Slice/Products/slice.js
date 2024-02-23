@@ -7,7 +7,7 @@ export const ProductsCrud = createApi({
     tagTypes: ['Products'],
     endpoints: (builder) => ({
         getProducts: builder.query({
-            query: () => 'roducts/',
+            query: () => 'products/',
             providesTags: ['Products'],
         }),
         createProducts: builder.mutation({

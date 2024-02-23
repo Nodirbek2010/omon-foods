@@ -1,23 +1,20 @@
 import React, { useState } from "react";
 import Modal from "../../generic/modal";
-import { FaPlus } from "react-icons/fa6";
 import ImageUpload from "../../generic/imgUploadFile";
 import { MdOutlineInsertPhoto } from "react-icons/md";
-import { useCreateProductsMutation } from "../../../redux/Slice/Products/slice";
+import { useUpdateProductsMutation } from "../../../redux/Slice/Products/slice";
 import { toast } from "react-toastify";
+import { CiEdit } from "react-icons/ci";
 import { useGetCatigoriesQuery } from "../../../redux/Slice/catigories/slice";
 
-const AdddUser = () => {
-  const [inputValue, setInputValue] = useState({
-    title: "",
-    category: "",
-  });
+const UpdateCom = ({ user }) => {
+  const [inputValue, setInputValue] = useState(user);
+  const [modal, setModal] = useState(false);
+  const [updateProducts, { isLoading }] = useUpdateProductsMutation();
+
 
   console.log(inputValue.category, "category");
   const { data } = useGetCatigoriesQuery();
-
-  const [modal, setModal] = useState(false);
-  const [createProducts, { isLoading }] = useCreateProductsMutation();
 
   const addData = async () => {
     const formData = new FormData();
@@ -28,31 +25,28 @@ const AdddUser = () => {
     formData.append("amount_measure", inputValue.amount_measure);
     formData.append("category", inputValue.category);
     formData.append("subcategory", inputValue.subcategory);
+    formData.append("id", inputValue.id);
 
-    formData.append("image", inputValue.img);
+
     try {
-      await createProducts(formData).unwrap();
-      toast.success(`Mahsulod turi  ${inputValue.title} qushildi`);
-      setInputValue({
-        name: "",
-        img: "",
-      });
+      await updateProducts(formData).unwrap();
+      toast.success(`Mahsulod ${inputValue.title} o'zgartirildi`);
       setModal(false);
     } catch (error) {
       if (error.status == 400) {
-        toast.error(`Malumot yuborishda xatolik !!!`);
+        toast.error(`Malumot o'zgartirishda xatolik !!!`);
       }
     }
   };
   return (
-    <div className="flex ">
-      <div className="relative flex justify-between p-20 10">
+    <div>
+      <div className="relative flex justify-between p-10 10">
         <button
+          title="TAHRIRLASH"
           onClick={() => setModal(true)}
-          class="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2  px-4 rounded inline-flex items-center"
+          class="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded inline-flex items-center"
         >
-          <FaPlus />
-          <span>Mahsulot</span>
+          <CiEdit />
         </button>
       </div>
       {modal && (
@@ -161,4 +155,4 @@ const AdddUser = () => {
   );
 };
 
-export default AdddUser;
+export default UpdateCom;
