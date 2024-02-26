@@ -7,6 +7,8 @@ import Login from './components/admin/login';
 import Categories from './components/admin/Categories/categ';
 import BannerFun from './components/admin/Banner/banner';
 import LayoutClient from './components/client/Layout';
+import NoteTable from './components/admin/note/NoteTable';
+
 function App() {
   return (
     <>
@@ -31,7 +33,7 @@ function App() {
             <Route path="/admin/products" element={<><Products /></>} />
             <Route path="/admin/deliveries" element={<h1>deliveries</h1>} />
             <Route path="/admin/categories" element={<Categories />} />
-            <Route path="/admin/note" element={<h1>note</h1>} />
+            <Route path="/admin/note" element={<NoteTable/>} />
           </Route>
         </Routes>
       </BrowserRouter>

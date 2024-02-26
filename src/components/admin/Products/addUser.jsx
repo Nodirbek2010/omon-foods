@@ -61,7 +61,7 @@ const AdddUser = () => {
           closeModal={() => setModal(false)}
           addFunc={() => addData()}
         >
-          <div class="gap-10  grid grid-cols-2  p-4 h-90   w-96 gap-2  ">
+          <div class="gap-12  grid grid-cols-2  p-4 h-90   w-96   ">
             <div>
               <h3> Mahsulot nomi:</h3>
               <input
