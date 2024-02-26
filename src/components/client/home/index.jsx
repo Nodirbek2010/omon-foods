@@ -1,11 +1,13 @@
 import React from 'react'
+import MainCom from '../main'
+import CaruselCom from '../main/carusel'
 
-const Home = () => {
+const HomeCom = () => {
   return (
     <div>
-       <Navbar/> 
+      <MainCom />
     </div>
   )
 }
 
-export default Home
+export default HomeCom
