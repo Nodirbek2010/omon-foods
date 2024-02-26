@@ -4,8 +4,7 @@
 
 .containerlogin {
     display: flex;
-    width: 1440px;
-    height: 750px;
+    height: 912px;
     align-items: center;
     justify-content: center;
 }
@@ -34,3 +33,19 @@
     border-radius: 5px;
 }
 
+
+.main-com{
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    height: 500px;
+    gap: 20px;
+
+}
+.main-com>div{
+    background: cadetblue;
+
+}
+.Links>ul{
+    display: grid;
+    gap: 15px
+}

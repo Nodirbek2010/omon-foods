@@ -7,15 +7,14 @@ import Login from './components/admin/login';
 import Categories from './components/admin/Categories/categ';
 import BannerFun from './components/admin/Banner/banner';
 import LayoutClient from './components/client/Layout';
-import NoteTable from './components/admin/note/NoteTable';
-
+import HomeCom from './components/client/home';
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route element={<LayoutClient />} >
-            <Route index element={<h1>Home components</h1>} />
+            <Route index element={<HomeCom/>} />
             <Route path='/shop' element={<h1>Shop</h1>} />
             <Route path='/about' element={<h1>About</h1>} />
 

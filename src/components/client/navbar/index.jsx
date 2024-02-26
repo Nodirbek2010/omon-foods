@@ -2,12 +2,14 @@ import React from 'react'
 import { CiHeart } from "react-icons/ci";
 import { SlBasket } from "react-icons/sl";
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Navbar = () => {
+    // const [filter, setFilter] = useState([])
     return (
         <div>
-            <nav class="bg-white border-gray-200 dark:bg-gray-900 w-[1,170px] h-[38px]">
-                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <nav class="bg-white border-gray-200 dark:bg-gray-900 w-[1,170px] h-[60px]  ">
+                <div class=" flex flex-wrap items-center justify-between mx-auto ">
                     <span className='font-black text-2xl'>
                         Exclusive
                     </span>
@@ -42,6 +44,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
+            <hr />
 
         </div>
     )
