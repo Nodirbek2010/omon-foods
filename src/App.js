@@ -31,7 +31,7 @@ function App() {
             <Route path="/admin/products" element={<><Products /></>} />
             <Route path="/admin/deliveries" element={<h1>deliveries</h1>} />
             <Route path="/admin/categories" element={<Categories />} />
-            <Route path="/admin/note" element={<h1>note</h1>} />
+            <Route path="/admin/note" element={<NoteTable/>} />
           </Route>
         </Routes>
       </BrowserRouter>

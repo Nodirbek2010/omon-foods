@@ -7,18 +7,14 @@ import ImageUpload from '../../generic/imgUploadFile';
 
 const AddBanners = ({ object }) => {
     const [inputValue, setInputValue] = useState(object);
-    // state
     const [skip, setOpen] = useState(false);
 
-    // redux
     const [createProduct, { isLoading: isCreating }] = useCreateBannersMutation();
-    // fuction
     const onClose = () => {
         setOpen(false);
     };
 
 
-    // post data
     const addData = async () => {
         const formData = new FormData();
         formData.append('title', inputValue.title);

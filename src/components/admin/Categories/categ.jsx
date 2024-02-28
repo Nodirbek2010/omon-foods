@@ -35,7 +35,7 @@ const Categories = () => {
                     <tbody>
                         {
                             isLoading ? <h1>Loading...</h1>
-                                //  <  BeatLoader       extraClass="col-span-12 flex justify-center" color="#36d7b7"/>
+                    
                                 :
                                 filter?.map((value) => {
                                     return (

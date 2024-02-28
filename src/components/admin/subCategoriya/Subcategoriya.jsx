@@ -15,7 +15,6 @@ const Products = () => {
         axios(`https://omofood.pythonanywhere.com/api/v1//sub-categories/`, { headers })
             .then((res) => setData(res?.data))
             .catch((error) => {
-                // Handle error, e.g., log it or display an error message.
                 console.error('Error fetching data:', error);
             });
     }, [])
