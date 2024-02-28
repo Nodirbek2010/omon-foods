@@ -17,7 +17,6 @@ function App() {
             <Route index element={<HomeCom/>} />
             <Route path='/shop' element={<h1>Shop</h1>} />
             <Route path='/about' element={<h1>About</h1>} />
-
           </Route>
         </Routes>
         <Routes>
