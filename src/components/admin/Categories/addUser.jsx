@@ -34,8 +34,8 @@ const AddUser = () => {
       };
     return (
         <div>
-            <div className="flex justify-between p-10 10 relative">
-                <button onClick={() => setModal(true)} class="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+            <div classNameName="flex justify-between p-10 10 relative">
+                <button onClick={() => setModal(true)} className="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded inline-flex items-center">
                     <FaPlus />
                     <span>Mahsulot</span>
                 </button>
@@ -44,15 +44,15 @@ const AddUser = () => {
                 modal &&
                 <Modal loader={isLoading} closeModal={() => setModal(false)} addFunc={() => addData()}>
 
-                    <div class="p-4  gap-3  md:p-5">
+                    <div className="p-4  gap-3  md:p-5">
                         <div>
                             <h3>Mahsulot turi nomi:</h3>
-                            <input onChange={(e) => setInputValue({ ...inputValue, title: e.target.value })} type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                            <input onChange={(e) => setInputValue({ ...inputValue, title: e.target.value })} type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
                         </div>
                         <div>
                             <ImageUpload
                                 title={'Image'}
-                                iconName={<MdOutlineInsertPhoto className="text-5xl" />}
+                                iconName={<MdOutlineInsertPhoto classNameName="text-5xl" />}
                                 iconTitle={'Upload Image'}
                                 fileType={'PNG, JPG, JPEG up to 5MB'}
                                 LabelFor={'img'}
