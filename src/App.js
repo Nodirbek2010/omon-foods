@@ -8,6 +8,8 @@ import Categories from './components/admin/Categories/categ';
 import BannerFun from './components/admin/Banner/banner';
 import LayoutClient from './components/client/Layout';
 import HomeCom from './components/client/home';
+import NoteTable from './components/admin/note/NoteTable';
+
 function App() {
   return (
     <>

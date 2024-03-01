@@ -4,7 +4,8 @@
 
 .containerlogin {
     display: flex;
-    height: 912px;
+    width: 1440px;
+    height: 740px;
     align-items: center;
     justify-content: center;
 }
@@ -48,4 +49,8 @@
 .Links>ul{
     display: grid;
     gap: 15px
+}
+
+.btngray{
+    background-color: gray !important;
 }
