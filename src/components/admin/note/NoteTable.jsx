@@ -27,17 +27,17 @@ const NoteTable = () => {
   }, [data]); // Depend on filteredTeachers to recalculate when it changes
 
   return (
-    <div className=" ">
+    <div className="">
 
-      <section className="bg-gray-50  dark:bg-white-900 p-3 sm:p-5 antialiased">
-        <div className="mx-auto max-w-screen-3xl  px-1 lg:px-12">
-          <div className="bg-white  dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden">
+      <section className="p-3 antialiased bg-gray-50 dark:bg-white-900 sm:p-5">
+        <div className="px-1 mx-auto max-w-screen-3xl lg:px-12">
+          <div className="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
             <br />
             <div className="flex justify-between px-3">
               <input
                 type="text"
                 id="table-search-users"
-                className="block p-2 pl-10 text-sm text-black border border-gray-300 rounded-lg w-80 bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block p-2 pl-10 text-sm text-black bg-white border border-gray-300 rounded-lg w-80 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Izlash..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
@@ -48,8 +48,8 @@ const NoteTable = () => {
             </div>
             <br />
             <div className="overflow-x-auto  h-[80vh] ">
-              <table className=" w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                <thead className="  text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
                     <th scope="col" className="p-4">
                       Maxsulot narxi
@@ -81,7 +81,7 @@ const NoteTable = () => {
                       );
                       return (
                         <tr
-                          className="border-b dark:border-gray-600 hover:bg-gray-100  dark:hover:bg-white-700"
+                          className="border-b dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-white-700"
                           key={item?.id}
                         >
 
