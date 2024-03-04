@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const Navbar = () => {
-    // const [filter, setFilter] = useState([])
     return (
         <div>
             <nav class="bg-white border-gray-200 dark:bg-gray-900 w-[1,170px] h-[60px]  ">

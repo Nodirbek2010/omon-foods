@@ -5,35 +5,26 @@ import { useGetProductQuery } from '../../../redux/Slice/basket';
 import Modal from '../../generic/modal';
 
 const AddNote = ({ object }) => {
-  // state
   const [skip, setOpen] = useState(false);
   const [inputValue, setInputValue] = useState(object);
   console.log(inputValue);
-  // redux
   const [createProduct, { isLoading: isCreating }] = useCreateNoteMutation();
   const { data: pronote, isLoading, refetch } = useGetProductQuery({ skip });
 
 
 
-  // fuction
   const onClose = () => {
     setOpen(false);
   };
 
 
-  // post data
   const addData = async () => {
     const formData = new FormData();
 
     formData.append('comment', inputValue.description);
-    // formData.append('update-date', inputValue.update_data);
-    // formData.append('created_date', inputValue.created_date);
     formData.append('price', inputValue.price);
     formData.append('amount', inputValue.amount);
     formData.append('product', inputValue.product);
-    // formData.append('', inputValue.product);
-
-
 
     try {
       await createProduct(formData).unwrap();
@@ -52,8 +43,7 @@ const AddNote = ({ object }) => {
     <div>
       <button
         onClick={() => setOpen(true)}
-        type="button"
-        className="inline-flex px-3 py-2 text-sm text-white bg-blue-500 rounded-md shadow-sm bgitems-center fo-bnt-semibold bg bg-primary hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        className="inline-flex items-center rounded-md bg-blue-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
       >
         +
         Maxsulot
@@ -70,7 +60,7 @@ const AddNote = ({ object }) => {
                   autoComplete='off'
                   type="number"
                   id="table-search-users"
-                  className="block p-2 pl-10 text-sm text-black bg-white border border-gray-300 rounded-lg w-60 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className=" block p-2 pl-10 text-sm text-black border border-gray-300 rounded-lg w-60 bg-white-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-whitr-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder=""
                   onChange={(e) => setInputValue({ ...inputValue, price: e.target.value })}
                 />
@@ -81,7 +71,7 @@ const AddNote = ({ object }) => {
                   autoComplete='off'
                   type="number"
                   id="table-search-users"
-                  className="block p-2 pl-10 text-sm text-black bg-white border border-gray-300 rounded-lg w-60 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block p-2 pl-10 text-sm text-black border border-gray-300 rounded-lg w-60 bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-text dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder=""
                   onChange={(e) => setInputValue({ ...inputValue, amount: e.target.value })}
                 />
@@ -93,7 +83,7 @@ const AddNote = ({ object }) => {
                   rows="4"
                   autoComplete='off'
                   onChange={(e) => setInputValue({ ...inputValue, description: e.target.value })}
-                  className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder=""
                   required
                 ></textarea>
@@ -105,7 +95,7 @@ const AddNote = ({ object }) => {
                 <label htmlFor="">Bor maxsulot Tanlang</label>
                 <select
                   onChange={(e) => setInputValue({ ...inputValue, product: e.target.value })}
-                  className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                  className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500">
                   <option value="Hech Biri">Hech Biri</option>
                   {pronote?.map((vlue) => {
                     return (
@@ -113,19 +103,6 @@ const AddNote = ({ object }) => {
                     )
                   })}
                 </select>
-
-                <div>
-                  <label htmlFor="Maxsulot Name:">Yangi Maxsulot:</label>
-                  <input
-                    disabled={inputValue?.product !== "Hech Biri" && inputValue?.product !== undefined && inputValue?.product > 0}
-                    autoComplete='off'
-                    type="text"
-                    id="table-search-users"
-                    className="block p-2 pl-10 text-sm text-black bg-white border border-gray-300 rounded-lg w-60 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder=""
-                    onChange={(e) => setInputValue({ ...inputValue, product: e.target.value })}
-                  />
-                </div>
 
               </div>
             </div>

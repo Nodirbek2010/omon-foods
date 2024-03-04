@@ -4,7 +4,8 @@
 
 .containerlogin {
     display: flex;
-    height: 912px;
+    width: 1440px;
+    height: 740px;
     align-items: center;
     justify-content: center;
 }
@@ -49,6 +50,10 @@
     display: grid;
     gap: 15px
 }
+
+.btngray{
+    background-color: gray !important;
+}    
 .grids{
     display: grid;
     grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
@@ -70,17 +75,57 @@ form>input{
     background-color: #3a3939;
     border-radius: 3px;
     height: 35px;
+    margin-top: 10px;
 }
+
 .tag{
     width: 24px;
     height: 24px;
     position: absolute;
     left: 145px;
-    top: 5px;
+    top: 15px;
 }
 .names{
     padding: 40px 0px 0px 50px;
 }
 .names>p{
     padding: 5px;
+}
+.foot-names{
+    padding: 35px 0px 0px 50px;
+}
+.foot-names>p{
+    padding: 5px;
+}
+.sixth-names{
+    padding: 33px 0px 0px 50px;
+}
+.sixth-names>p{
+    padding: 3px;
+}
+.seventh-name{
+    padding: 33px 0px 0px 50px;
+}
+.seventh-name>p{
+    padding: 5px;
+}
+.icons{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+}
+.facebook{
+    width: 30px;
+    height: 20px;
+}
+.twitter{
+    width: 30px;
+    height: 20px;
+}
+.instagram{
+    width: 30px;
+    height: 20px;
+}
+.nineth-name{
+    display: flex;
+    gap: 20px;
 }

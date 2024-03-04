@@ -20,14 +20,14 @@ const Categories = () => {
                 onChange={(e) => setSearch(e.target.value)}/>
                 <AddUser />
             </div>
-            <div class=" overflow-x-auto h-[75vh]">
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <div className=" overflow-x-auto h-[75vh]">
+                <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
-                            <th scope="col" class="px-6 py-3">
+                            <th scope="col" className="px-6 py-3">
                                 Maxsulot turi rasmi
                             </th>
-                            <th scope="col" class="px-6 py-3">
+                            <th scope="col" className="px-6 py-3">
                                 Maxsulot turi nomi
                             </th>
                         </tr>
@@ -39,11 +39,11 @@ const Categories = () => {
                                 :
                                 filter?.map((value) => {
                                     return (
-                                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 <img className="w-[50px] h-[50px] rounded-lg" src={value?.image} alt="" />
                                             </th>
-                                            <td class="px-6 py-4">
+                                            <td className="px-6 py-4">
                                                 {value?.title}
                                             </td>
                                             <td className="flex gap-2 items-center">

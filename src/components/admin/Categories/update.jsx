@@ -30,7 +30,7 @@ const UpdateCom = ({user}) => {
     return (
         <div>
             <div className="relative flex justify-between p-10 10">
-                <button title='TAHRIRLASH' onClick={() => setModal(true)} class="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+                <button title='TAHRIRLASH' onClick={() => setModal(true)} className="bg-blue-500 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded inline-flex items-center">
                     <CiEdit />
                 </button>
             </div>
@@ -38,10 +38,10 @@ const UpdateCom = ({user}) => {
                 modal &&
                 <Modal loader={isLoading} closeModal={() => setModal(false)} addFunc={() => addData()}>
 
-                    <div class="p-4  gap-3  md:p-5">
+                    <div className="p-4  gap-3  md:p-5">
                         <div>
                             <h3>Edit</h3>
-                            <input value={inputValue.title} onChange={(e) => setInputValue({ ...inputValue, title: e.target.value })} type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+                            <input value={inputValue.title} onChange={(e) => setInputValue({ ...inputValue, title: e.target.value })} type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
                         </div>
                         <div>
                             <ImageUpload

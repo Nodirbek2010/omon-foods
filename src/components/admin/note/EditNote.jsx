@@ -6,24 +6,20 @@ import { useGetSubCategoryQuery } from '../../../redux/Slice/subCatigories';
 import Modal from '../../generic/modal';
 
 const EditNote = ({ object }) => {
-  // state
   const [skip, setOpen] = useState(false);
   const [inputValue, setInputValue] = useState(object);
 
-  // redux
   const [updateProduct, { isLoading: isCreating }] = useUpdateNoteMutation();
   const { data, isLoading, refetch } = useGetNoteQuery({ skip });
   const { data: subData } = useGetSubCategoryQuery({ skip })
 
 
 
-  // fuction
   const onClose = () => {
     setOpen(false);
   };
 
 
-  // post data
   const addData = async () => {
     const formData = new FormData();
     formData.append('comment', inputValue.description);
@@ -66,7 +62,7 @@ const EditNote = ({ object }) => {
                 <input
                   type="number"
                   id="table-search-users"
-                  className="block p-2 pl-10 text-sm text-black border border-gray-300 rounded-lg w-60 bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block p-2 pl-10 text-smtext-black border border-gray-300 rounded-lg w-60 bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder=""
                   value={inputValue.price}
                   onChange={(e) => setInputValue({ ...inputValue, price: e.target.value })}
