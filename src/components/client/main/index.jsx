@@ -1,5 +1,5 @@
 import React from 'react'
-import CaruselCom from './carusel'
+// import CaruselCom from './carusel'
 
 const MainCom = () => {
 
