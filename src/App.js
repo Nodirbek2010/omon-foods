@@ -9,6 +9,7 @@ import BannerFun from './components/admin/Banner/banner';
 import LayoutClient from './components/client/Layout';
 import HomeCom from './components/client/home';
 import NoteTable from './components/admin/note/NoteTable';
+import Basket from './components/client/basket'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route index element={<HomeCom/>} />
             <Route path='/shop' element={<h1>Shop</h1>} />
             <Route path='/about' element={<h1>About</h1>} />
+            <Route path ='/basket' element={<Basket/>}/>
           </Route>
         </Routes>
         <Routes>
