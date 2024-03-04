@@ -20,7 +20,7 @@ const UpdateCom = ({user}) => {
         try {
           await updateCatigories(formData).unwrap();
           toast.success(`Mahsulod ${inputValue.title} o'zgartirildi`);
-          setModal(false);
+          setModal(false)
         } catch (error) {
             if (error.status == 400) {
                 toast.error(`Malumot o'zgartirishda xatolik !!!`);
