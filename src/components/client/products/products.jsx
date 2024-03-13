@@ -13,7 +13,7 @@ const ProductCom = () => {
             setLikedProducts([...likedProducts, productId]);
         }
     };
-
+// 
     console.log(data, '');
 
     return (
