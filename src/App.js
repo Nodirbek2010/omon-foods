@@ -11,6 +11,7 @@ import HomeCom from './components/client/home';
 import NoteTable from './components/admin/note/NoteTable';
 import NotFound404 from './components/client/404NotFound'; // Fixed import
 import Error404 from './components/client/404page'; // Fixed import
+import Basket from './components/client/basket/Basket';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route index element={<HomeCom />} />
             <Route path="/shop" element={<h1>Shop</h1>} />
             <Route path="/about" element={<h1>About</h1>} />
+            <Route path='/basket' element={<Basket/>}/>
           </Route>
 
           <Route path="/admin" element={<Login />} />
