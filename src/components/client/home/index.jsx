@@ -5,6 +5,7 @@ import CategoriesClient from '../categories'
 import CategoriyaCom from '../categories'
 // import CaruselCom from '../main/carusel'
 import ProductCom from '../products/products'
+import ArrivalCom from '../NewArrival/arrival'
 
 const HomeCom = () => {
   return (
@@ -12,7 +13,7 @@ const HomeCom = () => {
       <MainCom />
       <CategoriesClient/>
       <ProductCom/>
-      <h1>salom</h1>
+      <ArrivalCom/>
     </div>
   )
 }
