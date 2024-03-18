@@ -37,7 +37,8 @@
 
 .main-com{
     display: grid;
-    grid-template-columns: 2fr 8fr;
+    /* grid-template-columns: 2fr 8fr; */
+    display: flex;
     height: 500px;
     gap: 20px;
 
