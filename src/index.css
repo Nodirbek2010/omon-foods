@@ -129,3 +129,18 @@ form>input{
     display: flex;
     gap: 20px;
 }
+.img_com{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+  
+}
+.image_2{
+    display: flex;
+    gap: 20px;
+}
+.gap{
+    display: grid;
+    gap: 19px;
+}
