@@ -1,5 +1,6 @@
 import React from 'react'
 // import CaruselCom from './carusel'
+import Banner1 from "./banner"
 
 const MainCom = () => {
 
@@ -37,7 +38,7 @@ const MainCom = () => {
         </ul>
       </div>
       <div>
-        2
+        <Banner1/>
       </div>
     </div>
   )
