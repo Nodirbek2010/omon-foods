@@ -231,10 +231,7 @@ const Basket = () => {
               </div>
             ))}
 
-            <div className="flex flex-wrap justify-between">
 
-              <div className="w-full lg:w-1/3 ">
-                <div>
                   <div className="border-[1px] border-[solid] border-[black] p-[10px] w-[280px] h-[280px] rounded-[10px] ml-[900px]">
                     <div className="flex justify-between">
                       Eski Narxi:
@@ -252,9 +249,6 @@ const Basket = () => {
                   </div>
 
 
-                </div>
-              </div>
-            </div>
           </div>
         </section>
       </div>

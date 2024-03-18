@@ -12,7 +12,6 @@ export const OrderCrud = createApi({
       method: "OPTIONS",
       providesTags: ["Order"],
     }),
-
     orderCreate: build.mutation({
       query: (body) => ({
         url: "orders/checkout/",
