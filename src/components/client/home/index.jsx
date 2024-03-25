@@ -1,11 +1,10 @@
 import React from 'react'
 import MainCom from '../main'
 import CategoriesClient from '../categories'
-import CategoriyaCom from '../categories'
-import CaruselCom from '../main/carusel'
 import ProductCom from '../products/products'
 import ArrivalCom from '../NewArrival/arrival'
 import TableCom from '../work-table/table'
+import BestCom from '../Best-sells/best-sell'
 
 const HomeCom = () => {
   return (
@@ -13,6 +12,7 @@ const HomeCom = () => {
       <MainCom />
       <CategoriesClient/>
       <ProductCom/>
+      <BestCom/>
       <ArrivalCom/>
       <TableCom/>
     </div>

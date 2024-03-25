@@ -146,3 +146,10 @@ form>input{
     display: grid;
     gap: 19px;
 }
+.work-com{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    padding: 50px;
+}
+
