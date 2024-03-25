@@ -130,3 +130,15 @@ form>input{
     display: flex;
     gap: 20px;
 }
+.bannrimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bannerimg{
+   height: 400px !important;
+  
+}
+
