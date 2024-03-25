@@ -38,7 +38,7 @@ const BestCom = () => {
             <p className=' text-3xl pl-2 pt-8 pb-5'>Best Selling Products</p>
         <div className='grid grid-cols-4 gap-5 m-auto justify-center'>
           
-            {[...data].reverse()?.slice(0,4).map((value, index) => (
+            {[...data]?.reverse()?.slice(0,4)?.map((value, index) => (
                 <div className=' relative' key={index}>
                     <CiHeart
                         onClick={() => toggleLike(value.id)}

@@ -130,7 +130,7 @@ form>input{
     display: flex;
     gap: 20px;
 }
-<<<<<<< HEAD
+
 .bannrimg{
     display: flex;
     justify-content: center;
@@ -143,7 +143,7 @@ form>input{
   
 }
 
-=======
+
 .img_com{
     display: flex;
     justify-content: center;
@@ -160,14 +160,9 @@ form>input{
     display: grid;
     gap: 19px;
 }
-<<<<<<< HEAD
 .work-com{
     display: flex;
     gap: 50px;
     justify-content: center;
     padding: 50px;
 }
-
-=======
->>>>>>> f7d2f446c6d6397ffd786f501d86ed90aaccfe59
->>>>>>> ec5b96fe70db801acb2c6b2c0f451a49471069e9
