@@ -130,20 +130,6 @@ form>input{
     display: flex;
     gap: 20px;
 }
-<<<<<<< HEAD
-.bannrimg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.bannerimg{
-   height: 400px !important;
-  
-}
-
-=======
 .img_com{
     display: flex;
     justify-content: center;
@@ -160,4 +146,14 @@ form>input{
     display: grid;
     gap: 19px;
 }
->>>>>>> f7d2f446c6d6397ffd786f501d86ed90aaccfe59
+.bannrimg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bannerimg{
+   height: 400px !important;
+  
+}
