@@ -157,3 +157,17 @@ form>input{
    height: 400px !important;
   
 }
+.padding{
+    padding: 16px 130px;
+    color: #fff;
+    border-radius: 4px;
+}
+.padding2{
+    padding: 16px 111px;
+    border-radius: 4px;
+    border: 2px solid gray;
+}
+.icon_eyes{
+    color: #1a1a1a;
+    font-size: 20px;
+}

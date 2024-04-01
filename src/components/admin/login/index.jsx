@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import { FaRegEyeSlash } from "react-icons/fa";
 const Login = () => {
 
     const navigate =useNavigate()
@@ -52,7 +53,7 @@ const Login = () => {
                                 required
                             />
                         </div>
-                        <div className="logininput position-relative">
+                        <div className=" relative logininput position-relative">
                             <label htmlFor="password" className="form-label">
                                 Password
                             </label>
@@ -65,6 +66,7 @@ const Login = () => {
                                 }
                                 required
                             />
+                            <FaRegEyeSlash className="icon_eyes absolute bottom-1 left-80" />
                         </div>
 
 
