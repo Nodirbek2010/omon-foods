@@ -2,9 +2,20 @@ import React from 'react'
 import { CiHeart } from "react-icons/ci";
 import { SlBasket } from "react-icons/sl";
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
+import { useEffect, useState } from "react";
+import {useGetProductsQuery} from "../../../redux/Slice/Products/slice"
 const Navbar = () => {
+    const { data: ProductsData, isLoading } = useGetProductsQuery()
+    const [filter, setFilter] = useState([])
+    const [search, setSearch] = useState('')
+
+    useEffect(() => {
+        let res =ProductsData?.filter((value) => value?.title.toUpperCase().includes(search.toUpperCase()))
+        setFilter(res)
+    }, [ProductsData, search])
+
+
     return (
         <div>
             <nav class="bg-white border-gray-200 dark:bg-gray-900 w-[1,170px] h-[60px]  ">
@@ -20,7 +31,13 @@ const Navbar = () => {
                                 </svg>
                                 <span class="sr-only">Search icon</span>
                             </div>
-                            <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." />
+                            <div>
+                            <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..."
+                            onChange={(e) => setSearch(e.target.value)}
+                        
+                            />
+                            </div>
+                           
                         </div>
                         <CiHeart className='w-[40px] h-[30px] mt-1 ml-4 '/>
                         <SlBasket className='w-[40px] h-[25px] mt-1 ml-4 '/>
