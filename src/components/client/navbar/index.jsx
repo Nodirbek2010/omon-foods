@@ -79,16 +79,16 @@ const Navbar = () => {
                 </svg>
                 <span className="sr-only">Search icon</span>
               </div>
-              <input
+              <input 
                 type="text"
                 id="search-navbar"
-                className="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block  p-2 w-96 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Search..."
                 value={search}
                 onChange={handleInputChange}
               />
               {data?.result?.products?.map((value, index) => (
-                <div className='absolute z-10 bg-slate-400' key={index + 1}>
+                <div className='absolute z-10 w-96 h-7 justify-center rounded-md bg-slate-400' key={index + 1}>
                   <NavLink className="no-underline" to={`/product/${value?.id}`}>
                     <p className="container flex items-center ml-12 md:ml-0 gap-2 cursor-pointer">
                       <span>
