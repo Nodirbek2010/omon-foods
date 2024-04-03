@@ -4,7 +4,7 @@ import Google from '../../../assets/image/Icon-Google.png'
 
 const Sign_upCom = () => {
   return (
-    <div className=' grid grid-cols-2 '>
+    <div className=' grid grid-cols-2 sign_com '>
       <div>
         <img src={Side_img} alt="" />
       </div>
