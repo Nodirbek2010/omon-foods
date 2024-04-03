@@ -130,20 +130,6 @@ form>input{
     display: flex;
     gap: 20px;
 }
-
-.bannrimg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.bannerimg{
-   height: 400px !important;
-  
-}
-
-
 .img_com{
     display: flex;
     justify-content: center;
@@ -160,11 +146,16 @@ form>input{
     display: grid;
     gap: 19px;
 }
-.work-com{
+.bannrimg{
     display: flex;
-    gap: 50px;
     justify-content: center;
-    padding: 50px;
+    align-items: center;
+}
+
+
+.bannerimg{
+   height: 400px !important;
+  
 }
 .padding{
     padding: 16px 130px;
@@ -184,4 +175,13 @@ form>input{
     width: 20px;
     height: 10px;
     background-color: crimson;
+}
+.work-com{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+.sign_com{
+    padding: 40px;
 }
