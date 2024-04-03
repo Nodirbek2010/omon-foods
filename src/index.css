@@ -180,3 +180,8 @@ form>input{
     color: #1a1a1a;
     font-size: 20px;
 }
+.btn10>button{
+    width: 20px;
+    height: 10px;
+    background-color: crimson;
+}

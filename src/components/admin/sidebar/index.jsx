@@ -69,7 +69,7 @@ const Home = () => {
        </div>
           ))}
         </div>
-
+          <button>Chiqish</button>
       </div>
     </section>
   );
