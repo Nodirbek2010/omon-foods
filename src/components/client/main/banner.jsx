@@ -10,7 +10,7 @@ const contentStyle = {
   background: '#364d79',
 };
 
-const App = () => {
+const Banner1 = () => {
   const { data: BannersData, isLoading } = useGetBannersQuery();
 
   
@@ -29,4 +29,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Banner1;

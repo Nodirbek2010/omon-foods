@@ -129,20 +129,6 @@ form>input{
     display: flex;
     gap: 20px;
 }
-
-.bannrimg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.bannerimg{
-   height: 400px !important;
-  
-}
-
-
 .img_com{
     display: flex;
     justify-content: center;
@@ -159,14 +145,42 @@ form>input{
     display: grid;
     gap: 19px;
 }
-.work-com{
+.bannrimg{
     display: flex;
-    gap: 50px;
     justify-content: center;
-    padding: 50px;
+    align-items: center;
 }
 
 
-.aaaa{
-    border-radius: 10px;
+.bannerimg{
+   height: 400px !important;
+  
+}
+.padding{
+    padding: 16px 130px;
+    color: #fff;
+    border-radius: 4px;
+}
+.padding2{
+    padding: 16px 111px;
+    border-radius: 4px;
+    border: 2px solid gray;
+}
+.icon_eyes{
+    color: #1a1a1a;
+    font-size: 20px;
+}
+.btn10>button{
+    width: 20px;
+    height: 10px;
+    background-color: crimson;
+}
+.work-com{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px;
+}
+.sign_com{
+    padding: 40px;
 }
