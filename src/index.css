@@ -185,3 +185,31 @@ form>input{
 .sign_com{
     padding: 40px;
 }
+.sizing{
+    font-size: 54px;
+    line-height: 64px;
+    letter-spacing: 6%;
+    font-weight: 600;
+}
+.font_sizing{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+}
+.chairman{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 30px;
+    letter-spacing: 4%;
+}
+.everyone{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.twitter{
+    font-size: 24px;
+}
+.insta{
+    font-size: 24px;
+}
