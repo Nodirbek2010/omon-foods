@@ -184,3 +184,11 @@ form>input{
 .sign_com{
     padding: 40px;
 }
+
+.returnshop:hover{
+    color: white;
+	background-color: #db4444;
+}
+.weight{
+    font-weight:0px;
+}

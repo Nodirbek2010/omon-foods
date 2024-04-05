@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import {
   useDeleteBasketMutation,
   useGetBasketQuery,
@@ -9,6 +10,7 @@ import {
 
 
 const Basket = () => {
+  const [key, setKey] = useState(0);
   const { data: dataBasket, isSuccess, refetch: refetchData } = useGetBasketQuery();
   const [deleteBasket] = useDeleteBasketMutation();
   const [Increment] = useIncrementMutation();
@@ -17,6 +19,12 @@ const Basket = () => {
   const [user, setUser] = useState()
   const [selectTotal, setSelectTotal] = useState(1);
   const [totalAmount, settotalAmount] = useState(0);
+
+  const RefreshPage = () => {
+    // setTimeout(() => {
+      // window.location.reload();
+    // }, 1500);
+  }
 
 
 
@@ -165,7 +173,7 @@ const Basket = () => {
                     </div>
                   </td>
                   <td className="px-6 py-4">
-                  {(value?.product?.price*value?.amount)?.toLocaleString("uz-UZ")} so'm
+                    {(value?.product?.price * value?.amount)?.toLocaleString("uz-UZ")} so'm
                   </td>
                 </tr>
               </tbody>
@@ -173,19 +181,41 @@ const Basket = () => {
           ))}
         </table>
       </div>
-
-      <div className="border-[1px] border-[solid] border-[black] p-[10px] w-[280px] h-[280px] rounded-[10px] ml-[900px]">
-        <div className="flex justify-between">
-          Eski Narxi:
-          <del>
-            {dataBasket?.total_price?.discount_price?.toLocaleString("uz-UZ")} so'm
-          </del>
+      <div>
+        <NavLink to={"/"} >
+          <button className='returnshop px-[122px] py-[24px] border-[1px] border-[solid] border-[#808080] mt-[30px] rounded-[10px]'>Do'konga qaytish</button>
+        </NavLink>
+      </div>
+      <div className="flex  justify-between h-[400px] mt-[50px]">
+        <div >
+          <button onClick={RefreshPage()}>Sahifani Yangilash</button>
         </div>
-        <div className=" flex justify-between">
-          <h3>
-            Aksiyadagi narxi:
-          </h3>
-          {dataBasket?.total_price.price?.toLocaleString("uz-UZ")} so'm
+        <div className=" w-[470px] h-[324px] border-[1px] border-[solid] border-[#000] rounded-[4px] p-[48px] flex flex-col justify-evenly gap-">
+          <h1 className="text-[30px] font-[60px]  weight">Savat:</h1>
+
+          <div className="flex justify-between">
+            <h3>
+              Maxsulotlar narxi:
+            </h3>
+            {dataBasket?.total_price.price?.toLocaleString("uz-UZ")} so'm
+          </div>
+          <div className="border-[1px] border-solid border-[#808080]  "></div>
+          <div className=" flex justify-between">
+            <h3>
+              Yetakazib berish:
+            </h3>
+            <h3>Tekin</h3>
+          </div>
+          <div className="border-[1px] border-solid border-[#808080] "></div>
+
+          <div className=" flex justify-between">
+            <h3>
+              Umumiy:
+            </h3>
+            <h3>
+              {dataBasket?.total_price.price?.toLocaleString("uz-UZ")} so'm
+            </h3>
+          </div>
         </div>
       </div>
 
