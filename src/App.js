@@ -13,7 +13,7 @@ import NotFound404 from './components/client/404NotFound'; // Fixed import
 import Error404 from './components/client/404page'; // Fixed import
 import Basket from './components/client/basket/Basket';
 import Sign_upCom from './components/client/Sign_up/sign_up';
-
+import ProductPage from './components/client/ProductsPage';
 function App() {
   return (
     <>
@@ -24,7 +24,7 @@ function App() {
             <Route path="/shop" element={<h1>Shop</h1>} />
             <Route path="/about" element={<h1>About</h1>} />
             <Route path="/sign" element={<Sign_upCom/>} />
-
+            <Route path="/product/:id" element={<ProductPage />} />
             <Route path='/basket' element={<Basket/>}/>
           </Route>
 
