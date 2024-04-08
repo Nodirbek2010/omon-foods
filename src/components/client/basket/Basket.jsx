@@ -19,15 +19,6 @@ const Basket = () => {
   const [user, setUser] = useState()
   const [selectTotal, setSelectTotal] = useState(1);
   const [totalAmount, settotalAmount] = useState(0);
-
-  const RefreshPage = () => {
-    // setTimeout(() => {
-      // window.location.reload();
-    // }, 1500);
-  }
-
-
-
   const del = async (id) => {
     try {
       await deleteBasket({ id });
@@ -182,13 +173,13 @@ const Basket = () => {
         </table>
       </div>
       <div>
+        
         <NavLink to={"/"} >
           <button className='returnshop px-[122px] py-[24px] border-[1px] border-[solid] border-[#808080] mt-[30px] rounded-[10px]'>Do'konga qaytish</button>
         </NavLink>
       </div>
       <div className="flex  justify-between h-[400px] mt-[50px]">
         <div >
-          <button onClick={RefreshPage()}>Sahifani Yangilash</button>
         </div>
         <div className=" w-[470px] h-[324px] border-[1px] border-[solid] border-[#000] rounded-[4px] p-[48px] flex flex-col justify-evenly gap-">
           <h1 className="text-[30px] font-[60px]  weight">Savat:</h1>
