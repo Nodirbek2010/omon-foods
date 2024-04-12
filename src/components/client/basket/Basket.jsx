@@ -5,7 +5,7 @@ import {
   useDeleteBasketMutation,
   useGetBasketQuery,
   useIncrementMutation,
-} from "../../../redux/Slice/basket";
+} from "../../../redux/Slice/basket/index";
 
 
 
@@ -102,8 +102,12 @@ const Basket = () => {
   useEffect(() => {
     selectAll();
   }, [isSuccess]);
+  const maxsulotsoni = []
+  const id = []
+  
+
   return (
-    <div className="container">
+    <div className="container ">
       <div className="relative overflow-x-auto">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-white-50 dark:bg-white-700 dark:text-gray-400 border-[2px] border-[solid]">
@@ -116,6 +120,7 @@ const Basket = () => {
               </th>
               <th scope="col" className="px-6 py-3">
                 Miqdori
+
               </th>
               <th scope="col" className="px-6 py-3">
                 Umumiy narxi
@@ -126,9 +131,9 @@ const Basket = () => {
 
 
 
+          <tbody>
           {dataBasket?.items?.map((value) => (
-            <div className="w-[100%]">
-              <tbody>
+              
                 <tr className="bg-white border-b dark:bg-white-800 dark:border-gray-700">
                   <th scope="row" className="px-6 py-4 font-medium text-gray-900  dark:text-gray flex">
                     <div className="flex items-center gap-[50px]">
@@ -166,50 +171,53 @@ const Basket = () => {
                   <td className="px-6 py-4">
                     {(value?.product?.price * value?.amount)?.toLocaleString("uz-UZ")} so'm
                   </td>
+                  <td className="px-6 py-4">
+                  </td>
                 </tr>
-              </tbody>
-            </div>
           ))}
+          </tbody>
         </table>
       </div>
-      <div>
-        
+      <div className="flex w-100vh justify-between">
+
         <NavLink to={"/"} >
           <button className='returnshop px-[122px] py-[24px] border-[1px] border-[solid] border-[#808080] mt-[30px] rounded-[10px]'>Do'konga qaytish</button>
         </NavLink>
-      </div>
-      <div className="flex  justify-between h-[400px] mt-[50px]">
-        <div >
+        <div className="flex  justify-between h-[400px] mt-[50px]">
+          <div className=" w-[470px] h-[324px] border-[1px] border-[solid] border-[#000] rounded-[4px] p-[48px] flex flex-col justify-between items-center">
+            <div className="h-[175px] w-[400px] flex flex-col justify-between ">
+              <h1 className="text-[30px] font-[60px]  weight">Savat:</h1>
+
+              <div className="flex justify-between">
+                <h3>
+                  Maxsulotlar narxi:
+                </h3>
+                {dataBasket?.total_price.price?.toLocaleString("uz-UZ")} so'm
+              </div>
+              <div className="border-[1px] border-solid border-[#808080]  "></div>
+              <div className=" flex justify-between">
+                <h3>
+                  Yetakazib berish:
+                </h3>
+                <h3>Tekin</h3>
+              </div>
+              <div className="border-[1px] border-solid border-[#808080] "></div>
+
+              <div className=" flex justify-between">
+                <h3>
+                  Umumiy:
+                </h3>
+                <h3>
+                  {dataBasket?.total_price.price?.toLocaleString("uz-UZ")} so'm
+                </h3>
+              </div>
+            </div>
+            <NavLink to={"/basket/checkout"}>
+              <button className="bg-[#db4444] w-[260px] h-[40px] rounded-[5px] text-white">Buyurtma qilish uchun bosing</button>
+            </NavLink>
+          </div>
         </div>
-        <div className=" w-[470px] h-[324px] border-[1px] border-[solid] border-[#000] rounded-[4px] p-[48px] flex flex-col justify-evenly gap-">
-          <h1 className="text-[30px] font-[60px]  weight">Savat:</h1>
-
-          <div className="flex justify-between">
-            <h3>
-              Maxsulotlar narxi:
-            </h3>
-            {dataBasket?.total_price.price?.toLocaleString("uz-UZ")} so'm
-          </div>
-          <div className="border-[1px] border-solid border-[#808080]  "></div>
-          <div className=" flex justify-between">
-            <h3>
-              Yetakazib berish:
-            </h3>
-            <h3>Tekin</h3>
-          </div>
-          <div className="border-[1px] border-solid border-[#808080] "></div>
-
-          <div className=" flex justify-between">
-            <h3>
-              Umumiy:
-            </h3>
-            <h3>
-              {dataBasket?.total_price.price?.toLocaleString("uz-UZ")} so'm
-            </h3>
-          </div>
-        </div>
       </div>
-
     </div>
 
   );

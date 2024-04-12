@@ -23,10 +23,10 @@ function App() {
           <Route element={<LayoutClient />}>
             <Route index element={<HomeCom />} />
             <Route path="/shop" element={<h1>Shop</h1>} />
-            <Route path="/about" element={<AboutCom/>} />
-            <Route path="/sign" element={<Sign_upCom/>} />
-
-            <Route path='/basket' element={<Basket/>}/>
+            <Route path="/about" element={<AboutCom />} />
+            <Route path="/sign" element={<Sign_upCom />} />
+            <Route path='/basket' element={<Basket />} />
+            <Route path='/basket/checkout' element={<h1>basket checkout</h1>} />
           </Route>
 
           <Route path="/admin" element={<Login />} />
