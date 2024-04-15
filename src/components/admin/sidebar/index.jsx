@@ -33,7 +33,7 @@ const Home = () => {
       >
 
         <div className="flex items-center justify-end gap-6 py-3 text-center">
-          <Link to={"/admin/home"} className={`no-underline ${open ? "block" : "hidden"}`}>
+          <Link to={"/"} className={`no-underline ${open ? "block" : "hidden"}`}>
             <h1 className="text-4xl text-black">OMO FOOD</h1>
           </Link>
 
@@ -44,7 +44,7 @@ const Home = () => {
             />
           ) : (
             <FiArrowLeft
-              className="text-2xl text-black cursor-pointer" // Adjust the font size here
+              className="text-2xl text-black cursor-pointer"
               onClick={() => setOpen(!open)}
             />
           )}

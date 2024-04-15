@@ -37,7 +37,6 @@
 
 .main-com{
     display: grid;
-    /* grid-template-columns: 2fr 8fr; */
     display: flex;
     height: 500px;
     gap: 20px;
@@ -212,4 +211,12 @@ form>input{
 }
 .insta{
     font-size: 24px;
+}
+
+.returnshop:hover{
+    color: white;
+	background-color: #db4444;
+}
+.weight{
+    font-weight:0px;
 }
