@@ -13,7 +13,9 @@ import NotFound404 from './components/client/404NotFound'; // Fixed import
 import Error404 from './components/client/404page'; // Fixed import
 import Basket from './components/client/basket/Basket';
 import Sign_upCom from './components/client/Sign_up/sign_up';
-import ProductPage from './components/client/ProductsPage';
+import AboutCom from './components/client/About/about';
+import  ProductPage from "./components/client/ProductsPage/index"
+
 function App() {
   return (
     <>
@@ -22,7 +24,7 @@ function App() {
           <Route element={<LayoutClient />}>
             <Route index element={<HomeCom />} />
             <Route path="/shop" element={<h1>Shop</h1>} />
-            <Route path="/about" element={<h1>About</h1>} />
+            <Route path="/about" element={<AboutCom/>} />
             <Route path="/sign" element={<Sign_upCom/>} />
             <Route path="/product/:id" element={<ProductPage />} />
             <Route path='/basket' element={<Basket/>}/>
