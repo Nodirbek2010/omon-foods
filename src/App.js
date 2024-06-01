@@ -24,32 +24,25 @@ function App() {
           <Route element={<LayoutClient />}>
             <Route index element={<HomeCom />} />
             <Route path="/shop" element={<h1>Shop</h1>} />
-<<<<<<< HEAD
-            <Route path="/about" element={<AboutCom/>} />
-            <Route path="/sign" element={<Sign_upCom/>} />
-            <Route path="/product/:id" element={<ProductPage />} />
-            <Route path='/basket' element={<Basket/>}/>
-=======
             <Route path="/about" element={<AboutCom />} />
             <Route path="/sign" element={<Sign_upCom />} />
             <Route path='/basket' element={<Basket />} />
             <Route path='/basket/checkout' element={<h1>basket checkout</h1>} />
->>>>>>> a587c331623315ede2c7a04dff03f462c564b27f
           </Route>
 
           <Route path="/admin" element={<Login />} />
-          <Route element={<Layout />}>
-            <Route path="/admin/home" element={<h1>Admin</h1>} />
-            <Route path="/admin/order" element={<h1>order</h1>} />
-            <Route path="/admin/subcategories" element={<Subcategoriya />} />
-            <Route path="/admin/banners" element={<BannerFun />} />
-            <Route path="/admin/dashbord" element={<h1>dashbord</h1>} />
-            <Route path="/admin/discount" element={<h1>discount</h1>} />
-            <Route path="/admin/products" element={<Products />} />
-            <Route path="/admin/deliveries" element={<h1>deliveries</h1>} />
-            <Route path="/admin/categories" element={<Categories />} />
-            <Route path="/admin/note" element={<NoteTable />} />
-          </Route>
+            <Route element={<Layout />}>
+              <Route path="/admin/home" element={<h1>Admin</h1>} />
+              <Route path="/admin/order" element={<h1>order</h1>} />
+              <Route path="/admin/subcategories" element={<Subcategoriya />} />
+              <Route path="/admin/banners" element={<BannerFun />} />
+              <Route path="/admin/dashbord" element={<h1>dashbord</h1>} />
+              <Route path="/admin/discount" element={<h1>discount</h1>} />
+              <Route path="/admin/products" element={<Products />} />
+              <Route path="/admin/deliveries" element={<h1>deliveries</h1>} />
+              <Route path="/admin/categories" element={<Categories />} />
+              <Route path="/admin/note" element={<NoteTable />} />
+            </Route>
           <Route path="*" element={<NotFound404 />} /> {/* Handle 404 */}
         </Routes>
       </BrowserRouter>
